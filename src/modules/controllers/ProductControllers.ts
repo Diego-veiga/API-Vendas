@@ -9,9 +9,9 @@ export default class ProductController {
   public async index(request: Request, response: Response): Promise<Response> {
     const listProducts = new ListProductService();
 
-    const productsss = await listProducts.execute();
+    const product = await listProducts.execute();
 
-    return response.json(productsss);
+    return response.json(product);
   }
 
   public async show(request: Request, response: Response): Promise<Response> {
